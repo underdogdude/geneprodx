@@ -1,12 +1,13 @@
 // CSS VARIABLES
 :root {
-  --s-accent: #0f6b4e;
-  --s-accent-hover: #03a572;
+  --s-accent: #112735;
+  --s-accent-hover: #64b6b8;
   --s-bg: #fff;
   --s-text: #222;
   --s-line: #dcdfe5;
   --s-noti: #c00;
   --s-border: #7e8993;
+  --s-footer-color: #040b1a;
   --s-border-radius: 3px;
   --s-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
   --s-box-padding: 15px;
@@ -22,13 +23,17 @@
   --s-title-height: 120px;
   --s-title-bg-blur: 20px;
   --s-title-bg-opacity: 0.7;
+  --c-transition-hover: .4s ease all;
+}
+html { 
+  scroll-behavior: smooth;
 }
 .site-header {
   --s-bg: #fff;
   --s-text: #222;
 }
 .site-nav-m {
-  --s-bg: #111;
+  --s-bg: #112735;
   --s-text: #eee;
   --s-line: #333;
 }
@@ -44,7 +49,13 @@
   --s-bg: #f1f2f3;
   --s-text: #787980;
 }
-
+.button-hover { 
+  transform: scale(1);
+  transition: var(--c-transition-hover);
+  &:hover { 
+    transform: scale(1.1);
+  }
+}
 @media (min-width: 768px) {
   :root {
     --s-space: 20px;
@@ -58,5 +69,62 @@
   .main-header {
     --s-title-height: 220px;
     --s-title-size: 2rem;
+  }
+}
+
+
+.btn-kadence-primary  a.kt-button{ 
+  background-color: #abe9cd !important;
+  background-image: linear-gradient(315deg, #abe9cd 0%, #3eadcf 74%) !important;
+  border: 0;
+  transform: scale(1);
+  transition: var(--c-transition-hover);
+  &:hover { 
+    transform: scale(1.1);
+  }
+}
+
+.fluentform { 
+  form { 
+    label { 
+      color: #f4f4f4;
+      font-weight: 400;
+      font-size: 14px;
+      text-transform: uppercase;
+    }
+    input.ff-el-form-control, 
+    textarea.ff-el-form-control, 
+    input.ff-el-form-control:active,
+    input.ff-el-form-control:focus,
+    textarea.ff-el-form-control:active,
+    textarea.ff-el-form-control:focus{ 
+      border-radius: 0;
+      font-weight: 400;
+      padding: 12px 20px;
+      background-color: #172f4c;
+      border: 1px solid var(--s-accent);
+    }
+    select.ff-el-form-control,
+    select.ff-el-form-control:active,
+    select.ff-el-form-control:focus { 
+      border-radius: 0;
+      font-weight: 400;
+      background-color: #172f4c;
+      border: 1px solid var(--s-accent);
+      height: 50px !important;
+    }
+    button.ff-btn-submit { 
+      padding: 12px 30px;
+      font-size: 18px;
+      font-weight: 890;
+      background-color: #abe9cd !important;
+      background-image: linear-gradient(315deg, #abe9cd 0%, #3eadcf 74%) !important;
+      border: 0;
+      transform: scale(1);
+      transition: var(--c-transition-hover);
+      &:hover { 
+        transform: scale(1.1);
+      }
+    }
   }
 }

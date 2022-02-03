@@ -41,10 +41,8 @@
                 </nav>
                 <?php endif; ?>
 
-                <a class="site-search s-modal-trigger m-user" onclick="return false;"
-                    data-popup-trigger="site-search"><?php seed_icon('search'); ?></a>
-
-                <?php seed_member_menu() ?>
+                <!-- <a class="site-search s-modal-trigger m-user" onclick="return false;"
+                    data-popup-trigger="site-search"><?php seed_icon('search'); ?></a> -->
 
                 <?php if (is_active_sidebar( 'action' )) : ?>
                 <div class="site-action _desktop"><?php dynamic_sidebar( 'action' ); ?></div>

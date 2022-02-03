@@ -1,17 +1,12 @@
 </div>
 <!--#content-->
 
-<?php if (is_active_sidebar( 'footbar' ) ) : ?>
 
 <aside id="footbar" class="site-footbar">
     <div class="s-container">
         <?php dynamic_sidebar( 'footbar' ); ?>
     </div>
 </aside>
-
-<?php else: ?>
-
-<div class="site-footer-space"></div>
 <footer id="colophon" class="site-footer">
     <div class="s-container">
         <div class="site-info">
@@ -19,7 +14,6 @@
         </div>
     </div>
 </footer>
-<?php endif; ?>
 
 </div>
 <!--#page-->
@@ -35,6 +29,7 @@
 <?php endif; ?>
 
 <?php wp_footer(); ?>
+<script src="//code.tidio.co/jcyvhpylixd879vv3tdgs277mmubemay.js" async></script>
 </body>
 
 </html>

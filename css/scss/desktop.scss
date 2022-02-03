@@ -7,7 +7,6 @@ body.headbar-d {
 }
 .site-header {
   min-height: var(--s-header-height);
-  background-color: var(--s-bg);
   line-height: 1;
   > .s-container {
     position: relative;
@@ -33,6 +32,8 @@ body.headbar-d {
   transform: none;
   img {
     max-height: var(--s-header-height);
+    height: var(--s-header-height) ;
+    max-width: 250px;
   }
 }
 .site-title {
@@ -68,7 +69,14 @@ body.headbar-d {
     flex-direction: column;
     text-align: center;
     a {
-      padding: 10px 15px;
+      padding: 10px 20px;
+      font-weight: 700;
+      font-size: 13px;
+      text-transform: capitalize;
+      font-style: normal;
+      text-decoration: none;
+      line-height: 24px;
+      letter-spacing: -0.45px;
     }
     &:hover {
       > .sub-menu {

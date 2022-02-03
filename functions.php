@@ -303,3 +303,46 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 if (defined('JETPACK__VERSION')) {require get_template_directory() . '/inc/jetpack.php';}
+
+/* === List to Accordian === */
+if (function_exists('acf_register_block_type')) {
+    add_action( 'acf/init', 'acf_register_team_carousel' );
+}
+function acf_register_team_carousel() { 
+    acf_register_block_type(
+        array(
+            'name' => 'Team',
+            'title' => 'Team',
+            'description' => __('Display Team'),
+            'render_template' => 'template-parts/blocks/team.php',
+            'icon' => array(
+                'foreground' => '#FFAD34',
+                'background' => '#192C65',
+                'src' => 'groups',
+            ),
+            'keywords' => array('team')
+        )
+    );
+}
+
+
+/* === Social Media Block === */
+if (function_exists('acf_register_block_type')) {
+    add_action( 'acf/init', 'acf_register_social_media' );
+}
+function acf_register_social_media() { 
+    acf_register_block_type(
+        array(
+            'name' => 'social-media',
+            'title' => 'Social Media',
+            'description' => __('Display Social Media'),
+            'render_template' => 'template-parts/blocks/social-media.php',
+            'icon' => array(
+                'foreground' => '#FFAD34',
+                'background' => '#192C65',
+                'src' => 'share',
+            ),
+            'keywords' => array('social', 'media')
+        )
+    );
+}

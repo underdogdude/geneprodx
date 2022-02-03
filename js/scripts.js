@@ -13,3 +13,13 @@ var getClosest=function(e,t){for(Element.prototype.matches||(Element.prototype.m
 /*  Seed Modal from https://codepen.io/kimpetersend1/pen/LajgaW */
 const modalTriggers=document.querySelectorAll(".s-modal-trigger"),bodyBlackout=document.querySelector(".s-modal-bg"),allModals=document.querySelectorAll(".s-modal");modalTriggers.forEach(e=>{e.addEventListener("click",()=>{const{popupTrigger:l}=e.dataset,o=document.querySelector(`[data-s-modal="${l}"]`);o.classList.add("-visible"),bodyBlackout.classList.add("-blacked-out"),o.querySelector(".s-modal-close").addEventListener("click",()=>{o.classList.remove("-visible"),bodyBlackout.classList.remove("-blacked-out")})})}),bodyBlackout.addEventListener("click",()=>{bodyBlackout.classList.remove("-blacked-out"),allModals.forEach(function(e,l){e.classList.remove("-visible")})});
 
+
+
+document.querySelectorAll('.livechat-btn').forEach((e) => {
+    e.querySelector('a').addEventListener("click", (item) => {
+      tidioChatApi.open();
+    });
+  
+    var button = e.querySelector('a');
+    button.href = "javascript:void(0);";
+  });
