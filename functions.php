@@ -346,6 +346,26 @@ function acf_register_social_media() {
         )
     );
 }
+/* === Scientific Evidence === */
+if (function_exists('acf_register_block_type')) {
+    add_action( 'acf/init', 'acf_register_scientific_evidence' );
+}
+function acf_register_scientific_evidence() { 
+    acf_register_block_type(
+        array(
+            'name' => 'scientific-evidence',
+            'title' => 'Scientific Evidence',
+            'description' => __('Display Social Media'),
+            'render_template' => 'template-parts/blocks/scientific-evidence.php',
+            'icon' => array(
+                'foreground' => '#FFAD34',
+                'background' => '#192C65',
+                'src' => 'welcome-learn-more',
+            ),
+            'keywords' => array('social', 'media')
+        )
+    );
+}
 
 
 // Add Class to body

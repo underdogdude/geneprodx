@@ -47,6 +47,19 @@ body.headbar-d {
   padding-top: 2px;
 }
 .site-nav-d {
+  .nav-cta > a{ 
+    border-radius: 5px;
+    background: linear-gradient(
+    90deg, #82DAE7 0%, #3EADCF 100%);
+    margin-left: 30px;
+    &:hover { 
+      color: white !important;
+      border-bottom: none;
+      &::after { 
+        width: 0 !important;
+      }
+    }
+  }
   margin-left: auto;
   > div {
     height: 100%;
